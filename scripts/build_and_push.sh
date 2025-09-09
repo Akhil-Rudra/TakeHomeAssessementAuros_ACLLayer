@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REGISTRY="localhost:5001"
+REGISTRY="localhost:5002"
 IMAGE="${REGISTRY}/acl-api"
 TAG="$(git rev-parse --short HEAD || echo 'dev')"
 

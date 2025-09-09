@@ -1,5 +1,5 @@
 image:
-  repository: localhost:5001/acl-api
+  repository: k3d-acl-reg:5000/acl-api
   tag: "latest"
   pullPolicy: IfNotPresent
 

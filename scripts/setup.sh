@@ -3,7 +3,7 @@ set -euo pipefail
 
 CLUSTER_NAME="acl"
 REG_NAME="acl-reg"
-REG_PORT="5001"
+REG_PORT="5002"
 
 command -v k3d >/dev/null || { echo "Please install k3d"; exit 1; }
 command -v kubectl >/dev/null || { echo "Please install kubectl"; exit 1; }
