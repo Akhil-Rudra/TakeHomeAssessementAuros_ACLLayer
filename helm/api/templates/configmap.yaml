@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-mappings
+data:
+  mappings.yml: |
+{{ .Values.mappingYaml | nindent 4 }}

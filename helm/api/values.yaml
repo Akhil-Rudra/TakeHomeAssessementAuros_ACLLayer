@@ -1,0 +1,20 @@
+image:
+  repository: localhost:5001/acl-api
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  port: 3000
+
+db:
+  host: postgres-service
+  port: 5432
+  name: mydb
+  user: postgres
+  password: password
+
+# mappingYaml will be injected with --set-file mappingYaml=./config/mappings.yml
+mappingYaml: |
+  mappings: []

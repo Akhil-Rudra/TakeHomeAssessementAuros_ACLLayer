@@ -1,0 +1,18 @@
+image: postgres:16
+
+db:
+  name: mydb
+  user: postgres
+  password: password
+
+persistence:
+  enabled: true
+  size: 1Gi
+  storageClassName: "local-path"
+
+service:
+  port: 5432
+
+# initSql will be injected with --set-file initSql=./db/init.sql
+initSql: |
+  -- no-op

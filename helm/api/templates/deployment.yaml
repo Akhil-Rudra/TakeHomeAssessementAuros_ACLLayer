@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    app: acl-api
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: acl-api
+  template:
+    metadata:
+      labels:
+        app: acl-api
+      annotations:
+        checksum/config: "{{ .Values.mappingYaml | sha256sum }}"
+    spec:
+      containers:
+        - name: api
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: "{{ .Values.db.host }}"
+            - name: DB_PORT
+              value: "{{ .Values.db.port }}"
+            - name: DB_NAME
+              value: "{{ .Values.db.name }}"
+            - name: DB_USER
+              value: "{{ .Values.db.user }}"
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: api-secret
+                  key: DB_PASSWORD
+            - name: CONFIG_PATH
+              value: "/config/mappings.yml"
+          volumeMounts:
+            - name: mappings
+              mountPath: /config
+      volumes:
+        - name: mappings
+          configMap:
+            name: api-mappings
