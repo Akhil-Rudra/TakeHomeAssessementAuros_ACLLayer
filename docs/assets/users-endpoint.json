@@ -1,0 +1,14 @@
+[
+  {
+    "created_at": "Thu, 11 Sep 2025 01:13:21 GMT",
+    "email": "ada@example.com",
+    "full_name": "Ada Lovelace",
+    "user_id": 1
+  },
+  {
+    "created_at": "Thu, 11 Sep 2025 01:13:21 GMT",
+    "email": "alan@example.com",
+    "full_name": "Alan Turing",
+    "user_id": 2
+  }
+]

@@ -1,0 +1,50 @@
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2025-09-11 01:13:20.488 UTC [49] LOG:  starting PostgreSQL 16.10 (Debian 16.10-1.pgdg13+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-11 01:13:20.492 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-11 01:13:20.540 UTC [52] LOG:  database system was shut down at 2025-09-11 01:13:19 UTC
+2025-09-11 01:13:20.603 UTC [49] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+CREATE TABLE
+CREATE TABLE
+INSERT 0 2
+INSERT 0 2
+
+
+2025-09-11 01:13:21.192 UTC [49] LOG:  received fast shutdown request
+waiting for server to shut down....2025-09-11 01:13:21.198 UTC [49] LOG:  aborting any active transactions
+2025-09-11 01:13:21.204 UTC [49] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+2025-09-11 01:13:21.205 UTC [50] LOG:  shutting down
+2025-09-11 01:13:21.205 UTC [50] LOG:  checkpoint starting: shutdown immediate
+2025-09-11 01:13:21.277 UTC [50] LOG:  checkpoint complete: wrote 946 buffers (5.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.033 s, sync=0.036 s, total=0.073 s; sync files=311, longest=0.011 s, average=0.001 s; distance=4325 kB, estimate=4325 kB; lsn=0/192BF28, redo lsn=0/192BF28
+2025-09-11 01:13:21.287 UTC [49] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2025-09-11 01:13:21.327 UTC [1] LOG:  starting PostgreSQL 16.10 (Debian 16.10-1.pgdg13+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+2025-09-11 01:13:21.328 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-09-11 01:13:21.328 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-09-11 01:13:21.329 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-09-11 01:13:21.333 UTC [67] LOG:  database system was shut down at 2025-09-11 01:13:21 UTC
+2025-09-11 01:13:21.339 UTC [1] LOG:  database system is ready to accept connections
+2025-09-11 01:18:21.416 UTC [65] LOG:  checkpoint starting: time
+2025-09-11 01:18:26.007 UTC [65] LOG:  checkpoint complete: wrote 47 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.568 s, sync=0.005 s, total=4.592 s; sync files=13, longest=0.003 s, average=0.001 s; distance=260 kB, estimate=260 kB; lsn=0/196D328, redo lsn=0/196D2F0

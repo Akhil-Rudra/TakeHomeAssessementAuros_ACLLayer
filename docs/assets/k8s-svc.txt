@@ -1,0 +1,4 @@
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+api-service        ClusterIP   10.43.184.125   <none>        3000/TCP   20m
+kubernetes         ClusterIP   10.43.0.1       <none>        443/TCP    24m
+postgres-service   ClusterIP   10.43.53.231    <none>        5432/TCP   7m22s

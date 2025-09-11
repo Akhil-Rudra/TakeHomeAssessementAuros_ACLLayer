@@ -1,0 +1,3 @@
+NAME                              READY   STATUS    RESTARTS   AGE     IP          NODE              NOMINATED NODE   READINESS GATES
+api-deployment-7db9b54fc8-jrdfq   1/1     Running   0          20m     10.42.1.5   k3d-acl-agent-0   <none>           <none>
+postgres-0                        1/1     Running   0          7m11s   10.42.1.7   k3d-acl-agent-0   <none>           <none>
