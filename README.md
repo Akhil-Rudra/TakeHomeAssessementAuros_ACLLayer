@@ -144,4 +144,3 @@ Artifacts saved in `docs/assets/`:
 
 ---
 
-✨ With these steps, anyone can run the project locally and see live API responses.
