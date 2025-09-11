@@ -32,7 +32,7 @@ The project demonstrates containerization, Helm deployments, service discovery, 
 
 ---
 
-## 🚀 How to Run (Step by Step)
+## 🚀 How to Run (Step by Step) -> Note: This was locally ran in MAC
 
 ### 1. Install prerequisites
 - Install **Docker Desktop** → open it and wait until it says **Running**.
