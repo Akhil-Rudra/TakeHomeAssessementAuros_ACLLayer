@@ -1,6 +1,6 @@
 # TakeHomeAssessementAuros_ACLLayer
 
-A simple **DevOps/Cloud-native demo project** showing how to run a Flask API backed by PostgreSQL on a **local Kubernetes cluster (k3d)**.  
+A simple **DevOps/Cloud-native demo project** showing how to run a Flask API backend by PostgreSQL on a **local Kubernetes cluster (k3d)**.  
 The project demonstrates containerization, Helm deployments, service discovery, and port-forwarding to test APIs locally.
 
 ---
