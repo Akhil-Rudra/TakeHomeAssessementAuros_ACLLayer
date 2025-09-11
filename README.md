@@ -120,7 +120,6 @@ Artifacts saved in `docs/assets/`:
 - [orders-endpoint.json](docs/assets/orders-endpoint.json) – `/orders` response  
 
 ### Screenshots
-Add your screenshots (saved in `docs/assets/`) like this:
 
 ```md
 #### Healthz endpoint
